@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Features - Digital Twins</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/ai.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">AI Digital Twins</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="ai.html" class="active">AI Features</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="profile.html">Profile</a>
+            <a href="login.html" class="auth-btn">Login</a>
+            <a href="signup.html" class="auth-btn">Sign Up</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="ai-features">
+        <section class="face-recognition">
+            <h2>Face Recognition</h2>
+            <div class="camera-container">
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas" style="display: none;"></canvas>
+                <div class="camera-controls">
+                    <button id="startCamera" class="btn">
+                        <i class="fas fa-video"></i> Start Camera
+                    </button>
+                    <button id="captureBtn" class="btn" style="display: none;">
+                        <i class="fas fa-camera"></i> Capture
+                    </button>
+                    <button id="retakeBtn" class="btn" style="display: none;">
+                        <i class="fas fa-redo"></i> Retake
+                    </button>
+                </div>
+                <p id="error" class="error-message"></p>
+            </div>
+            <div id="recognition-result" class="result-container">
+                <p>Click "Start Camera" to begin</p>
+            </div>
+        </section>
+
+        <section class="text-voice-analysis">
+            <h2>Text & Voice Analysis</h2>
+            <div class="analysis-container">
+                <div class="text-analysis">
+                    <h3>Text Analysis</h3>
+                    <textarea id="textInput" placeholder="Type your thoughts here..."></textarea>
+                    <button id="analyzeTextBtn" class="btn">
+                        <i class="fas fa-search"></i> Analyze Text
+                    </button>
+                    <div id="textAnalysisResult" class="result-container"></div>
+                </div>
+                
+                <div class="voice-analysis">
+                    <h3>Voice Analysis</h3>
+                    <div class="voice-controls">
+                        <button id="startRecordingBtn" class="btn">
+                            <i class="fas fa-microphone"></i> Start Recording
+                        </button>
+                        <button id="stopRecordingBtn" class="btn" style="display: none;">
+                            <i class="fas fa-stop"></i> Stop Recording
+                        </button>
+                    </div>
+                    <div id="voiceAnalysisResult" class="result-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="behavior-analysis">
+            <h2>Behavior Analysis</h2>
+            <div class="behavior-container">
+                <div class="behavior-assessment">
+                    <h3>Social Interaction Assessment</h3>
+                    <div class="assessment-form">
+                        <div class="question-group">
+                            <label>How often do you feel comfortable in social situations?</label>
+                            <input type="range" min="1" max="5" class="behavior-slider">
+                        </div>
+                        <div class="question-group">
+                            <label>How easily do you make new friends?</label>
+                            <input type="range" min="1" max="5" class="behavior-slider">
+                        </div>
+                        <div class="question-group">
+                            <label>How well do you handle group activities?</label>
+                            <input type="range" min="1" max="5" class="behavior-slider">
+                        </div>
+                        <button id="analyzeBehaviorBtn" class="btn">
+                            <i class="fas fa-chart-line"></i> Analyze Behavior
+                        </button>
+                    </div>
+                </div>
+                <div id="behaviorAnalysisResult" class="result-container">
+                    <div class="behavior-chart">
+                        <canvas id="behaviorChart"></canvas>
+                    </div>
+                    <div class="behavior-recommendations"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AI Digital Twins</h4>
+                <p>Transforming lives through AI technology</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ai.html">AI Features</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AI Digital Twins. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Load dependencies in correct order -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-detection@1.0.1/dist/face-detection.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/ai-features.js"></script>
+</body>
+</html> 

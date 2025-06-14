@@ -1,0 +1,279 @@
+/* Virtual Clone Page Styles */
+.virtual-clone-page {
+    padding-top: 80px;
+}
+
+/* Hero Section */
+.clone-hero {
+    background: linear-gradient(135deg, #6e8efb, #4a90e2);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Clone Creation Section */
+.clone-creation {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+.creation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Avatar Section */
+.avatar-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#webcam, #avatar-canvas {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    background: #000;
+    object-fit: cover;
+}
+
+.avatar-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Personality Section */
+.personality-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.personality-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.personality-traits {
+    margin-top: 1.5rem;
+}
+
+.trait-slider {
+    margin-bottom: 1rem;
+}
+
+.trait-slider label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.trait-slider input[type="range"] {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* Knowledge Section */
+.knowledge-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.knowledge-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Create Clone Button */
+.create-clone-section {
+    text-align: center;
+}
+
+.primary-btn {
+    background: #4a90e2;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    background: #357abd;
+    transform: translateY(-2px);
+}
+
+/* Clone Interaction Section */
+.clone-interaction {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+.interaction-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.clone-display {
+    text-align: center;
+}
+
+.clone-avatar {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #eee;
+    overflow: hidden;
+}
+
+.clone-status {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #4caf50;
+    color: white;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.chat-interface {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.chat-input {
+    display: flex;
+    gap: 1rem;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.chat-input button {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background: #4a90e2;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chat-input button:hover {
+    background: #357abd;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .creation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .interaction-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .clone-avatar {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .clone-hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .chat-interface {
+        height: 400px;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 

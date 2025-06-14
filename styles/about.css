@@ -1,0 +1,319 @@
+/* About Page Styles */
+.about-page {
+    padding-top: 80px;
+}
+
+/* Hero Section */
+.about-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/about-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.about-content {
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* Mission Section */
+.mission {
+    background-color: var(--white);
+}
+
+.mission h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+}
+
+.mission p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* Technology Section */
+.technology {
+    background-color: var(--background-color);
+}
+
+.technology h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.tech-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+}
+
+.tech-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.tech-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.tech-card p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Benefits Section */
+.benefits {
+    background-color: var(--white);
+}
+
+.benefits h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    padding: 2rem;
+    border-radius: 10px;
+    background: var(--background-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.benefit-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.benefit-card ul {
+    list-style: none;
+}
+
+.benefit-card ul li {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.benefit-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: var(--background-color);
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+}
+
+.testimonial-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial {
+    padding: 2rem;
+}
+
+.testimonial-content {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.testimonial-content p {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.25rem;
+}
+
+.author-info p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.testimonial-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.testimonial-controls button {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.testimonial-controls button:hover {
+    background-color: #357abd;
+}
+
+/* Stats Section */
+.stats {
+    background-color: var(--white);
+}
+
+.stats h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.stat-card {
+    padding: 2rem;
+    background: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-hero {
+        height: 50vh;
+    }
+
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 3rem 1rem;
+    }
+
+    .tech-grid,
+    .benefits-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial {
+        padding: 1rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tech-card,
+.benefit-card,
+.testimonial,
+.stat-card {
+    animation: fadeIn 0.6s ease-out;
+} 

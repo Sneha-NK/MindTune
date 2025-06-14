@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - AI Digital Twins</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">AI Digital Twins</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="ai.html">AI Features</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="profile.html" class="active">Profile</a>
+            <a href="login.html" class="auth-btn">Login</a>
+            <a href="signup.html" class="auth-btn">Sign Up</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="profile-page">
+        <div class="container">
+            <div class="profile-grid">
+                <!-- Profile Sidebar -->
+                <aside class="profile-sidebar">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <img src="images/default-avatar.jpg" alt="Profile Picture" id="profileAvatar">
+                            <button class="change-avatar-btn">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div>
+                        <h2 id="userName">John Doe</h2>
+                        <p id="userEmail">john.doe@example.com</p>
+                    </div>
+                    <nav class="profile-nav">
+                        <a href="#personal-info" class="active">
+                            <i class="fas fa-user"></i> Personal Information
+                        </a>
+                        <a href="#mood-tracking">
+                            <i class="fas fa-chart-line"></i> Mood Tracking
+                        </a>
+                        <a href="#notifications">
+                            <i class="fas fa-bell"></i> Notifications
+                        </a>
+                        <a href="#security">
+                            <i class="fas fa-lock"></i> Security
+                        </a>
+                        <a href="#delete-account">
+                            <i class="fas fa-trash-alt"></i> Delete Account
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Profile Content -->
+                <div class="profile-content">
+                    <!-- Personal Information Section -->
+                    <section id="personal-info" class="profile-section">
+                        <h3>Personal Information</h3>
+                        <form id="personalInfoForm" class="profile-form">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" value="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="profileEmail">Email</label>
+                                <input type="email" id="profileEmail" name="email" value="john.doe@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" value="+1 (555) 123-4567">
+                            </div>
+                            <div class="form-group">
+                                <label for="bio">Bio</label>
+                                <textarea id="bio" name="bio" rows="4">I'm interested in personal growth and emotional intelligence.</textarea>
+                            </div>
+                            <button type="submit" class="btn primary-btn">Save Changes</button>
+                        </form>
+                    </section>
+
+                    <!-- Mood Tracking Section -->
+                    <section id="mood-tracking" class="profile-section">
+                        <h3>Mood Tracking</h3>
+                        <div class="mood-chart">
+                            <canvas id="moodChart"></canvas>
+                        </div>
+                        <div class="mood-stats">
+                            <div class="mood-stat-card">
+                                <h4>Current Mood</h4>
+                                <div class="mood-emoji">😊</div>
+                                <p>Happy (85%)</p>
+                            </div>
+                            <div class="mood-stat-card">
+                                <h4>Weekly Average</h4>
+                                <div class="mood-trend">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>+15%</span>
+                                </div>
+                                <p>Improving</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Notifications Section -->
+                    <section id="notifications" class="profile-section">
+                        <h3>Notifications</h3>
+                        <div class="notification-settings">
+                            <div class="notification-option">
+                                <div class="option-text">
+                                    <h4>Email Notifications</h4>
+                                    <p>Receive updates and reports via email</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="notification-option">
+                                <div class="option-text">
+                                    <h4>Push Notifications</h4>
+                                    <p>Get real-time alerts on your device</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="notification-option">
+                                <div class="option-text">
+                                    <h4>Weekly Reports</h4>
+                                    <p>Receive weekly mood and behavior analysis</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Security Section -->
+                    <section id="security" class="profile-section">
+                        <h3>Security</h3>
+                        <form id="securityForm" class="profile-form">
+                            <div class="form-group">
+                                <label for="currentPassword">Current Password</label>
+                                <input type="password" id="currentPassword" name="currentPassword">
+                            </div>
+                            <div class="form-group">
+                                <label for="newPassword">New Password</label>
+                                <input type="password" id="newPassword" name="newPassword">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm New Password</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword">
+                            </div>
+                            <button type="submit" class="btn primary-btn">Update Password</button>
+                        </form>
+                        <div class="two-factor">
+                            <h4>Two-Factor Authentication</h4>
+                            <p>Add an extra layer of security to your account</p>
+                            <button class="btn secondary-btn">Enable 2FA</button>
+                        </div>
+                    </section>
+
+                    <!-- Delete Account Section -->
+                    <section id="delete-account" class="profile-section">
+                        <h3>Delete Account</h3>
+                        <div class="delete-account-content">
+                            <div class="warning-message">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <p>Warning: This action cannot be undone. All your data will be permanently deleted.</p>
+                            </div>
+                            <form id="deleteAccountForm" class="profile-form">
+                                <div class="form-group">
+                                    <label for="deleteConfirm">Type "DELETE" to confirm</label>
+                                    <input type="text" id="deleteConfirm" name="deleteConfirm">
+                                </div>
+                                <button type="submit" class="btn danger-btn">Delete Account</button>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AI Digital Twins</h4>
+                <p>Transforming lives through AI technology</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ai.html">AI Features</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AI Digital Twins. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html> 

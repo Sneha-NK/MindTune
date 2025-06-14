@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Clone - AI Digital Twins</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/virtual-clone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">AI Digital Twins</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="ai.html">AI Features</a>
+            <a href="virtual-clone.html" class="active">Virtual Clone</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="profile.html">Profile</a>
+            <a href="login.html" class="auth-btn">Login</a>
+            <a href="signup.html" class="auth-btn">Sign Up</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="virtual-clone-page">
+        <section class="clone-hero">
+            <div class="hero-content">
+                <h1>Create Your Virtual Clone</h1>
+                <p>Experience the future of digital interaction with your personalized AI twin</p>
+            </div>
+        </section>
+
+        <section class="clone-creation">
+            <div class="container">
+                <div class="creation-grid">
+                    <div class="avatar-section">
+                        <h2>Your Virtual Avatar</h2>
+                        <div class="avatar-container">
+                            <video id="webcam" autoplay playsinline></video>
+                            <canvas id="avatar-canvas"></canvas>
+                            <div class="avatar-controls">
+                                <button id="captureBtn" class="btn">
+                                    <i class="fas fa-camera"></i> Capture Photo
+                                </button>
+                                <button id="retakeBtn" class="btn" style="display: none;">
+                                    <i class="fas fa-redo"></i> Retake
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="personality-section">
+                        <h2>Personality Configuration</h2>
+                        <div class="personality-form">
+                            <div class="form-group">
+                                <label for="cloneName">Clone Name</label>
+                                <input type="text" id="cloneName" placeholder="Give your clone a name">
+                            </div>
+                            <div class="form-group">
+                                <label>Voice Type</label>
+                                <select id="voiceType">
+                                    <option value="natural">Natural</option>
+                                    <option value="friendly">Friendly</option>
+                                    <option value="professional">Professional</option>
+                                </select>
+                            </div>
+                            <div class="personality-traits">
+                                <h3>Personality Traits</h3>
+                                <div class="trait-slider">
+                                    <label>Extroversion</label>
+                                    <input type="range" min="0" max="100" value="50">
+                                </div>
+                                <div class="trait-slider">
+                                    <label>Openness</label>
+                                    <input type="range" min="0" max="100" value="50">
+                                </div>
+                                <div class="trait-slider">
+                                    <label>Agreeableness</label>
+                                    <input type="range" min="0" max="100" value="50">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="knowledge-section">
+                    <h2>Knowledge Base</h2>
+                    <div class="knowledge-form">
+                        <div class="form-group">
+                            <label for="interests">Interests & Hobbies</label>
+                            <input type="text" id="interests" placeholder="e.g., reading, music, technology">
+                        </div>
+                        <div class="form-group">
+                            <label for="expertise">Areas of Expertise</label>
+                            <input type="text" id="expertise" placeholder="e.g., programming, design, writing">
+                        </div>
+                        <div class="form-group">
+                            <label for="background">Background Story</label>
+                            <textarea id="background" rows="4" placeholder="Tell us about your clone's background..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="create-clone-section">
+                    <button id="createCloneBtn" class="btn primary-btn">
+                        <i class="fas fa-magic"></i> Create My Virtual Clone
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="clone-interaction" style="display: none;">
+            <div class="container">
+                <h2>Interact with Your Clone</h2>
+                <div class="interaction-grid">
+                    <div class="clone-display">
+                        <div class="clone-avatar"></div>
+                        <div class="clone-status">Active</div>
+                    </div>
+                    <div class="chat-interface">
+                        <div class="chat-messages" id="chatMessages"></div>
+                        <div class="chat-input">
+                            <input type="text" id="messageInput" placeholder="Type your message...">
+                            <button id="sendMessageBtn" class="btn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            <button id="voiceInputBtn" class="btn">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AI Digital Twins</h4>
+                <p>Transforming lives through AI technology</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ai.html">AI Features</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AI Digital Twins. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection"></script>
+    <script src="js/virtual-clone.js"></script>
+</body>
+</html> 
